@@ -1,8 +1,7 @@
 ﻿using Moteur.Metier;
-using System;
 using Moteur.Repositories;
 using Moteur.Repositories.Interface;
-using Moteur.Utilitaires.Validateur;
+using System;
 
 namespace Test
 {
@@ -10,9 +9,8 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            string s = "test";
-            int testInt = 0;
-            testInt.Valider(nameof(testInt)).StrictementPositif();
+            ISerieRepository serieRepository = new SerieRepository();
+            Serie serie = serieRepository.ObtenirSerieParId(456);
 
             Console.ReadKey();
         }
