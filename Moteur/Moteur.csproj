@@ -44,6 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\EnumTypeRecherche.cs" />
+    <Compile Include="Metier\Createur.cs" />
+    <Compile Include="Metier\Episode.cs" />
+    <Compile Include="Metier\Network.cs" />
+    <Compile Include="Metier\Saison.cs" />
+    <Compile Include="Metier\Serie.cs" />
     <Compile Include="Repositories\Interface\IFilmRepository.cs" />
     <Compile Include="Metier\Film.cs" />
     <Compile Include="Metier\Genre.cs" />
@@ -54,6 +59,8 @@
     <Compile Include="Metier\URL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FilmRepository.cs" />
+    <Compile Include="Repositories\Interface\ISerieRepository.cs" />
+    <Compile Include="Repositories\SerieRepository.cs" />
     <Compile Include="Utilitaires\EnumExtension.cs" />
     <Compile Include="Utilitaires\TelecharcherData.cs" />
     <Compile Include="Utilitaires\Interface\ITelecharcherData.cs" />
