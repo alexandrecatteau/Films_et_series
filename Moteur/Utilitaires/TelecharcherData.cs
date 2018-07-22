@@ -16,7 +16,7 @@ namespace Moteur.Utilitaires
         public string ObtenirData(URL url)
         {
             url.Valider(nameof(url));
-            url.Url.Valider(nameof(url.Url));
+            url.Url.Valider(nameof(url.Url)).NonVide();
 
             string retour = string.Empty;
 
@@ -26,11 +26,6 @@ namespace Moteur.Utilitaires
             }
 
             return retour;
-        }
-
-        public string ObtenirData(Url url)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

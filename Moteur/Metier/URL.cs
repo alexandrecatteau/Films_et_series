@@ -47,7 +47,7 @@ namespace Moteur.Metier
         {
             get
             {
-                return this.TypeRecherche.ToName();
+                return this.TypeRecherche.ObtenirNom();
             }
         }
 
