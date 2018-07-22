@@ -6,7 +6,10 @@ namespace Moteur.Utilitaires
 {
     public static class EnumExtension
     {
-        public static T GetAttribute<T>(this System.Enum value) where T : Attribute
+        /// <summary>
+        /// Recuppération des attributs.
+        /// </summary>
+        private static T ObtenirAttribut<T>(this System.Enum value) where T : Attribute
         {
             var type = value.GetType();
             var memberInfo = type.GetMember(value.ToString());
@@ -14,11 +17,13 @@ namespace Moteur.Utilitaires
             return (T)attributes[0];
         }
 
-        // This method creates a specific call to the above method, requesting the
-        // Description MetaData attribute.
-        public static string ToName(this System.Enum value)
+        /// <summary>
+        /// Récupéeatrion de la description de l'enum.
+        /// </summary>
+        /// <returns>Description de l'enum.</returns>
+        public static string ObtenirNom(this System.Enum value)
         {
-            var attribute = value.GetAttribute<DescriptionAttribute>();
+            var attribute = value.ObtenirAttribut<DescriptionAttribute>();
             return attribute == null ? value.ToString() : attribute.Description;
         }
     }
