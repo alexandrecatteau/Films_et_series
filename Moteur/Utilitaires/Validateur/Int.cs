@@ -15,7 +15,6 @@ namespace Moteur.Utilitaires.Validateur
             if (i < 1)
             {
                 throw new ArgumentException($"Le paramétre {_validateurObjet.NomParametre} doit être supérieur à 1.");
-                qsdaze qsdaze
             }
         }
     }
